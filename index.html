@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Canvas Page</title>
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/examples/starter-template/starter-template.css" rel="stylesheet">
+    <style type="text/css">
+    	canvas{
+    		border: 1px solid #000;
+    	}
+        .col-md-3{
+            padding-top:16px;
+        }
+        .save-image{
+            padding-top:16px;
+        }
+
+        .reset-image{
+            padding-top:16px;
+        }
+
+    </style>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+        </div>
+      </div>
+    </nav>
+
+    <div class="container" style="display: flex; padding: 0px;width: 100%; justify-content: center; align-items: center;">
+
+      <div class="starter-template">
+	      <div class="row" style="padding:0px">
+	      	<div class="col-md-4 col-sm-4">
+	      		<div class="row">
+		      		<div class="col-md-9">
+		      			IMAGE
+                <input id="uploader" type="file"/>
+		      		</div>
+		      		<div class="col-md-3">
+		      			<input type="color" id="bg_color">
+		      		</div>
+		      		<div class="col-md-3">
+	      				<input type="text" id="new_text" class="form-control" placeholder="Input text">
+		      		</div>
+		      		<div class="col-md-3">
+	      				<input type="button" id="btn_add_new" class="btn btn-primary" value="Input The Text">
+		      		</div>
+		      	</div>
+                <div class="save-image">
+                  <button id="download">Download Image</button>
+                </div>
+                <div class="reset-image">
+                    
+                    <input type="button" id="btn_add_new" class="btn btn-primary" value="Reset">
+                </div>
+	      	</div>
+	      	<div class="col-md-7 col-sm-7">
+	      		<canvas width="800" height="800" id="canvas"></canvas>
+	      	</div>
+	      </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+  	<script type="text/javascript" src="http://fabricjs.com/lib/fabric.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.5.0/fabric.min.js"></script>
+
+  	<script src="script.js"></script>
+  </body>
+</html>
